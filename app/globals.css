@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: 144 52 233;
+    --color-accent: 241 100 18;
+    --color-bg: 255 255 255;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+    background: #ffffff;
+    color: #020617;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+      "SF Pro Display", ui-sans-serif, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: radial-gradient(
+        circle at top left,
+        rgba(144, 52, 233, 0.12),
+        transparent 55%
+      ),
+      radial-gradient(
+        circle at top right,
+        rgba(241, 100, 18, 0.12),
+        transparent 55%
+      );
+  }
+
+  .gradient-pill {
+    background-image: linear-gradient(120deg, #9034e9, #f16412);
+  }
+
+  .section-curve {
+    border-radius: 3rem;
+  }
+}
